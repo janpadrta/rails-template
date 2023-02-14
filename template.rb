@@ -26,7 +26,7 @@ def apply_template!
   copy_file "overcommit.yml", ".overcommit.yml"
   template "node-version.tt", ".node-version", force: true
   template "ruby-version.tt", ".ruby-version", force: true
-
+  puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   copy_file "Thorfile"
   copy_file "Procfile"
   copy_file "package.json"
