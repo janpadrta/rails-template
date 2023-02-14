@@ -3,11 +3,12 @@ require "json"
 RAILS_REQUIREMENT = "~> 7.0.0".freeze
 
 def apply_template!
+  puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   assert_minimum_rails_version
   assert_valid_options
   #assert_postgresql
   add_template_repository_to_source_path
-  puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
   if install_vite?
     self.options = options.merge(
       css: nil,
