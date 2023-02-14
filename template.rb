@@ -5,7 +5,7 @@ RAILS_REQUIREMENT = "~> 7.0.0".freeze
 def apply_template!
   assert_minimum_rails_version
   assert_valid_options
-  assert_postgresql
+  #assert_postgresql
   add_template_repository_to_source_path
 
   if install_vite?
