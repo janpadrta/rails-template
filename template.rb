@@ -7,7 +7,7 @@ def apply_template!
   assert_valid_options
   #assert_postgresql
   add_template_repository_to_source_path
-
+  puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   if install_vite?
     self.options = options.merge(
       css: nil,
@@ -26,7 +26,7 @@ def apply_template!
   copy_file "overcommit.yml", ".overcommit.yml"
   template "node-version.tt", ".node-version", force: true
   template "ruby-version.tt", ".ruby-version", force: true
-  puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
   copy_file "Thorfile"
   copy_file "Procfile"
   copy_file "package.json"
